@@ -58,7 +58,7 @@ cp $input/*.fasta $input/Fasta/.
  	echo "Performing sequences quality control"
 	mkdir -p $input/Curated_Sequences
 	mkdir -p $input/Orthology_Prediction
-	nproc > $input/Data/Number_cores.txt
+	nproc --all > $input/Data/Number_cores.txt
 
 for Fsq in $FastaSeq
 	do
