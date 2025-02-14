@@ -30,6 +30,8 @@ RUN apt-get update && \
   wget && \
   rm -rf /var/lib/apt/lists/*
 
+FROM rocker/r-ver:4.2.2  # Use newer R version
+
 # install R packages
 RUN R -q -e 'install.packages(c("caret", "reshape2", "dplyr", "stringr", "lme4"))' && \
   R -q -e 'install.packages("https://cran.r-project.org/src/contrib/Archive/pbkrtest/pbkrtest_0.4-4.tar.gz", repos=NULL, type="source")' && \
